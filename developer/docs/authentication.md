@@ -43,3 +43,65 @@ Should you ever need to regenerate your client secret, use the red regenerate bu
 2. Click the *Enable* button (or the edit icon if you've already enabled it.)
 3. Enter the redirect URL you'd like to use.
 4. That's it!
+
+## Retrieving an Access Token
+
+### Authorization Code Grant
+Coming soon!
+
+### Implicit Grant
+To obtain a token, open a browser window with the URL `https://api.agendas.co/api/v1/authorize`. Pass in your client ID, redirect URL, and scopes (separated by commas) through query variables.
+
+You can also pass in an optional `state` parameter.
+
+*Sample Request:*
+```
+https://api.agendas.co/api/v1/authorize?response_type=token&client_id=CLIENT_ID&redirect_url=REDIRECT_URL&scopes=SCOPE,SCOPE
+```
+
+| Param Name | Description |
+| --- | --- |
+| `response_type` | Pass in `token` to use implicit grant. |
+| `client_id` | Your app's client ID. You can find this in the console. |
+| `redirect_url` | The URL to send the token to. This **must** match the redirect URL you've set in the console. |
+| `scopes` | A comma-separated list of [authentication scopes](#authentication-scopes). |
+
+#### Response
+
+If authentication succeeds, the API will redirect the user to your redirect URL. The access token will be in the `access_token` parameter of the URL. This access token is valid for 7 days.
+
+*Example Response URL:* `https://redirect.url?access_token=ACCESS_TOKEN&token_type=bearer&expires_in=604800`
+
+## Authentication Scopes
+
+Here's a list of the authentication scopes you can use:
+
+| Scope Name | Permission |
+| --- | --- |
+| `email` | Retrieve the user's email address |
+| `username-read` | Read the user's username |
+| `agenda-read` | Read the user's agendas, tags, and tasks |
+| `agenda-write` | Write to the user's agendas, tags, and tasks |
+
+## Using Access Tokens
+When calling an API method, you can authenticate using these 2 methods:
+* **Authorization Header.** This is the **recommended** method. To authenticate, encode the token within the `Authorization` HTTP header, like so:
+  ```
+  Authorization: Bearer {token}
+  ```
+  Ensure that the term `Bearer` is in the header.
+* **Token Parameter.** This method should *only* be used for testing. To authenticate using this method, encode the token within the URL, like so: `https://api.agendas.co/api/v1/{endpoint}?token=TOKEN`
+
+### Authentication Errors
+Authentication errors will be sent in plain text.
+
+| Status | Response Body | Meaning |
+| --- | --- | --- |
+| 401 | `Missing token` | You did not provide an access token. |
+| 401 | `Invalid token type` | Your token's type is not supported by the Agendas API. Make sure it is a `Bearer` token. |
+| 401 | `Token expired` | Your token has expired. You should ask the user to re-authenticate. |
+| 401 | `Invalid token` | The token you provided is incorrect, has been revoked, or is otherwise invalid. You should ask the user to re-authenticate.
+| 403 | | Your app does not have permission to access a resource. Try re-authenticating with the correct scopes.
+
+## Next Steps
+Learn how to [work with a user's agendas](agendas).
