@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{page.title}}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="icon" href="https://app.agendas.co/agendas.png" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+    <link rel="stylesheet" href="/style.css" />
+
+    <script>
+    $(document).ready(function() {
+      $("nav .button-collapse").sideNav();
+    });
+    </script>
+  </head>
+  <body>
+    <header class="navbar-fixed">
+      <nav class="green darken-1">
+        <div class="nav-wrapper">
+          <h1><a href="/" class="brand-logo"><object data="https://app.agendas.co/agendas.svg" type="image/svg+xml"></object> Agendas</a></h1>
+          <a href="#" data-activates="mobile-sidenav" class="button-collapse"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="https://app.agendas.co" class="waves-effect waves-light btn blue accent-2">Launch Agendas</a></li>
+          </ul>
+          <ul class="side-nav" id="mobile-sidenav">
+            <li class="agendas-sidenav-item waves-effect">
+              <a href="/">
+                <object data="https://app.agendas.co/agendas.svg" type="image/svg+xml"></object> Agendas
+              </a>
+            </li>
+            <li class="waves-effect waves-blue"><a href="https://app.agendas.co" class="blue-text text-accent-4">Launch Agendas</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    {{content}}
+    <footer class="page-footer green darken-1">
+      <div class="container">
+        <div class="row" style="margin: 0; padding-bottom: 24px;">
+          <div class="col s12 m4">
+            <h5 class="white-text">Made with <i class="material-icons">favorite</i> by <a href="https://www.anli5005.rocks" class="white-text"><u>anli5005</u></a>.</h5>
+          </div>
+          <div class="col s12 m7 offset-m1">
+            <h5 class="white-text">Check out the code.</h5>
+            <p class="white-text" style="margin-bottom: 1em;">The source code for the Agendas web app and this website is on Github. Check it out and contribute if you'd like!</p>
+            <a class="waves-effect waves-light btn blue-grey" href="https://github.com/agendas">Github</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

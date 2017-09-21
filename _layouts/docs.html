@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{page.title}}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="icon" href="https://app.agendas.co/agendas.png" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+    <link rel="stylesheet" href="/style.css" />
+
+    <script>
+    $(document).ready(function() {
+      $("nav .button-collapse").sideNav();
+    });
+    </script>
+
+    <style>
+    #content {
+      padding: 24px;
+    }
+
+    @media only screen and (min-width : 993px) {
+      #content {
+        padding-left: 324px;
+      }
+
+      footer {
+        padding-left: 320px;
+      }
+
+      header.navbar-fixed {
+        display: none;
+      }
+    }
+
+    #content h1 {
+      font-size: 3rem;
+      font-weight: 300;
+    }
+
+    #content h2 {
+      font-size: 2rem;
+    }
+
+    #content h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    .side-nav hr {
+      border: none;
+      background-color: rgba(0, 0, 0, 0.1);
+      height: 1px;
+    }
+
+    #content {
+      line-height: 150%;
+    }
+
+    #content p {
+      margin-bottom: 1rem;
+    }
+
+    #content li {
+      margin-bottom: 0.5rem;
+    }
+
+    #content ul, #content ul > li {
+      list-style-type: disc;
+    }
+
+    #content li {
+      display: list-item;
+    }
+
+    #content code {
+      background-color: rgba(0, 0, 0, 0.1);
+      border-radius: 2px;
+      font-family: Menlo, monospace;
+    }
+    </style>
+  </head>
+  <body>
+    <header class="navbar-fixed hide-on-lg-and-up">
+      <nav class="white black-text">
+        <div class="nav-wrapper">
+          <h1><a href="/" class="brand-logo black-text">Agendas Docs</a></h1>
+          <a href="#" data-activates="docs-sidenav" class="button-collapse black-text"><i class="material-icons">menu</i></a>
+        </div>
+      </nav>
+    </header>
+    <aside>
+      <ul class="side-nav fixed" id="docs-sidenav">
+        <li class="waves-effect"><a href="/developer"><i class="material-icons">arrow_back</i> Go back</a></li>
+        <hr />
+        <li class="agendas-sidenav-item waves-effect"><a href="/developer/docs">Agendas API Docs</a></li>
+        <li class="waves-effect"><a href="/developer/docs">Home</a></li>
+        <li class="waves-effect"><a href="/developer/docs/getting-started">Getting Started</a></li>
+        <li class="waves-effect"><a href="/developer/docs/authentication">Authentication</a></li>
+        <hr />
+        <li class="waves-effect waves-blue"><a href="https://app.agendas.co/#/console" class="blue-text">Open Dev Console</a></li>
+      </ul>
+    </aside>
+    <div id="content">
+      {{content}}
+    </div>
+  </body>
+</html>

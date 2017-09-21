@@ -1,193 +1,76 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Agendas | One place. All of your tasks.</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-    <link rel="icon" href="https://app.agendas.co/agendas.png" />
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-
-    <style>
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html, body {
-      width: 100%;
-      height: 100%;
-    }
-
-    body {
-      font-family: system-ui, Roboto, "Helvetica Neue", arial;
-    }
-
-    nav h1 {
-      margin-top: 0;
-      margin-bottom: 0;
-    }
-
-    .brand-logo object, .agendas-sidenav-item object {
-      width: 1em;
-      height: 1em;
-      vertical-align: middle;
-      display: inline-block;
-      margin: -0.25em 0.5em 0 0.5em;
-    }
-
-    li.agendas-sidenav-item a {
-      font-size: 24px;
-    }
-
-    .agendas-sidenav-item object {
-      margin-left: 0;
-    }
-
-    .side-nav li.waves-effect {
-      display: block;
-    }
-
-    .waves-effect.waves-blue .waves-ripple {
-      background-color: rgba(33, 150, 243, 0.45);
-    }
-
-    .large-text {
-      font-size: 1.25em;
-    }
-
-    .section-features li {
-      display: inline-block;
-      margin-right: 1rem;
-      font-size: 1rem;
-    }
-
-    .section-features .material-icons {
-      font-size: 1.2rem;
-      vertical-align: middle;
-    }
-
-    .material-tooltip {
-      max-width: 200px;
-    }
-    </style>
-
-    <script>
-    $(document).ready(function() {
-      $("nav .button-collapse").sideNav();
-    });
-    </script>
-  </head>
-  <body>
-    <header class="navbar-fixed">
-      <nav class="green darken-1">
-        <div class="nav-wrapper">
-          <h1><a href="/" class="brand-logo"><object data="https://app.agendas.co/agendas.svg" type="image/svg+xml"></object> Agendas</a></h1>
-          <a href="#" data-activates="mobile-sidenav" class="button-collapse"><i class="material-icons">menu</i></a>
-          <ul class="right hide-on-med-and-down">
-            <li><a href="https://app.agendas.co" class="waves-effect waves-light btn blue accent-2">Launch Agendas</a></li>
-          </ul>
-          <ul class="side-nav" id="mobile-sidenav">
-            <li class="agendas-sidenav-item waves-effect">
-              <a href="/">
-                <object data="https://app.agendas.co/agendas.svg" type="image/svg+xml"></object> Agendas
-              </a>
-            </li>
-            <li class="waves-effect waves-blue"><a href="https://app.agendas.co" class="blue-text text-accent-4">Launch Agendas</a></li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-    <section class="section blue darken-2 white-text">
-      <div class="center" style="margin-top: 2em; margin-bottom: 2em;">
-        <h3 class="center">Introducing Agendas.</h3>
-        <h5 class="center" style="margin-bottom: 2rem;">One place. All of your tasks.</h5>
-        <a class="waves-effect btn green accent-2 black-text" href="https://app.agendas.co">Get started</a>
-      </div>
-    </section>
-    <section class="section white">
-      <div class="container row" style="margin-top: 2em; margin-bottom: 2em;">
-        <div class="col s12 m8">
-          <h4>For students.</h4>
-          <p class="large-text" style="margin-bottom: 1rem;">Tired of managing paper planners? Keep all of your assignments in Agendas and never miss homework again!</p>
-          <ul class="section-features" style="margin-bottom: 1rem;">
-            <li class="tooltipped" data-position="top" data-delay="0" data-tooltip="Use your school Google account to sign in securely and quickly.">
-              <i class="material-icons">person</i>
-              <span>Sign in with Google</span>
-            </li>
-            <li class="tooltipped" data-position="top" data-delay="0" data-tooltip="It's faster to add tasks to Agendas than to MyHomework, Todoist, or an ordinary paper planner">
-              <i class="material-icons">keyboard</i>
-              <span>Instant Add</span>
-            </li>
-            <li class="tooltipped" data-position="top" data-delay="0" data-tooltip="Use this Chrome extension to instantly add assignments from Google Classroom to Agendas.">
-              <i class="material-icons">class</i>
-              <span>Agendas for Classroom</span>
-            </li>
-          </ul>
-          <a class="waves-effect waves-light btn red accent-2" href="https://app.agendas.co">Get started</a>
-        </div>
-      </div>
-    </section>
-    <section class="section grey lighten-4">
-      <div class="container row" style="margin-top: 2em; margin-bottom: 2em;">
-        <div class="col s12 m8 push-m4 right-align">
-          <h4 class="right-align">For teams.</h4>
-          <p class="large-text right-align" style="margin-bottom: 1rem;">Use one agenda to keep track of your team's past, present, and future progress.</p>
-          <ul class="section-features right-align" style="margin-bottom: 1rem;">
-            <li class="tooltipped" data-position="top" data-delay="0" data-tooltip="Share agendas with others in your team using a robust permissions system.">
-              <i class="material-icons">supervisor_account</i>
-              <span>Sharing</span>
-            </li>
-            <li class="tooltipped" data-position="top" data-delay="0" data-tooltip="Easily organize and color-code agendas with tags.">
-              <i class="material-icons">local_offer</i>
-              <span>Tags</span>
-            </li>
-            <li class="tooltipped grey-text" data-position="top" data-delay="0" data-tooltip="Create, edit, and complete tasks right inside your team's Slack chat.">
-              <i class="material-icons">chat</i>
-              <span>Agendas for Slack (coming soon)</span>
-            </li>
-          </ul>
-          <a class="waves-effect btn green accent-4" href="https://app.agendas.co">Get started</a>
-        </div>
-        <div class="col s12 m4 pull-m8"></div>
-      </div>
-    </section>
-    <section class="section white">
-      <div class="container row" style="margin-top: 2em; margin-bottom: 2em;">
-        <div class="col s12 m8">
-          <h4>For life.</h4>
-          <p class="large-text" style="margin-bottom: 1rem;">Keep track of everything in your life using Agendas.</p>
-          <ul class="section-features" style="margin-bottom: 1rem;">
-            <li class="tooltipped" data-position="top" data-delay="0" data-tooltip="Share agendas with family and friends.">
-              <i class="material-icons">person_add</i>
-              <span>Sharing</span>
-            </li>
-            <li class="grey-text tooltipped" data-position="top" data-delay="0" data-tooltip="Use our Discord bot to manage agendas inside Discord servers.">
-              <i class="material-icons">voice_chat</i>
-              <span>Agendas for Discord (coming soon)</span>
-            </li>
-          </ul>
-          <a class="waves-effect waves-light btn blue accent-4" href="https://app.agendas.co">Get started</a>
-        </div>
-      </div>
-    </section>
-    <footer class="page-footer green darken-1">
-      <div class="container">
-        <div class="row" style="margin: 0; padding-bottom: 24px;">
-          <div class="col s12 m4">
-            <h5 class="white-text">Made with <i class="material-icons">favorite</i> by <a href="https://www.anli5005.rocks" class="white-text"><u>anli5005</u></a>.</h5>
-          </div>
-          <div class="col s12 m7 offset-m1">
-            <h5 class="white-text">Check out the code.</h5>
-            <p class="white-text" style="margin-bottom: 1em;">The source code for the Agendas web app and this website is on Github. Check it out and contribute if you'd like!</p>
-            <a class="waves-effect waves-light btn blue-grey" href="https://github.com/agendas">Github</a>
-          </div>
-        </div>
-      </div>
-    </footer>
-  </body>
-</html>
+---
+title: Agendas | One place. All of your tasks.
+---
+<section class="section blue darken-2 white-text">
+  <div class="center" style="margin-top: 2em; margin-bottom: 2em;">
+    <h3 class="center">Introducing Agendas.</h3>
+    <h5 class="center" style="margin-bottom: 2rem;">One place. All of your tasks.</h5>
+    <a class="waves-effect btn green accent-2 black-text" href="https://app.agendas.co">Get started</a>
+  </div>
+</section>
+<section class="section white">
+  <div class="container row" style="margin-top: 2em; margin-bottom: 2em;">
+    <div class="col s12 m8">
+      <h4>For students.</h4>
+      <p class="large-text" style="margin-bottom: 1rem;">Tired of managing paper planners? Keep all of your assignments in Agendas and never miss homework again!</p>
+      <ul class="section-features" style="margin-bottom: 1rem;">
+        <li class="tooltipped" data-position="top" data-delay="0" data-tooltip="Use your school Google account to sign in securely and quickly.">
+          <i class="material-icons">person</i>
+          <span>Sign in with Google</span>
+        </li>
+        <li class="tooltipped" data-position="top" data-delay="0" data-tooltip="It's faster to add tasks to Agendas than to MyHomework, Todoist, or an ordinary paper planner">
+          <i class="material-icons">keyboard</i>
+          <span>Instant Add</span>
+        </li>
+        <li class="tooltipped" data-position="top" data-delay="0" data-tooltip="Use this Chrome extension to instantly add assignments from Google Classroom to Agendas.">
+          <i class="material-icons">class</i>
+          <span>Agendas for Classroom</span>
+        </li>
+      </ul>
+      <a class="waves-effect waves-light btn red accent-2" href="https://app.agendas.co">Get started</a>
+    </div>
+  </div>
+</section>
+<section class="section grey lighten-4">
+  <div class="container row" style="margin-top: 2em; margin-bottom: 2em;">
+    <div class="col s12 m8 push-m4 right-align">
+      <h4 class="right-align">For teams.</h4>
+      <p class="large-text right-align" style="margin-bottom: 1rem;">Use one agenda to keep track of your team's past, present, and future progress.</p>
+      <ul class="section-features right-align" style="margin-bottom: 1rem;">
+        <li class="tooltipped" data-position="top" data-delay="0" data-tooltip="Share agendas with others in your team using a robust permissions system.">
+          <i class="material-icons">supervisor_account</i>
+          <span>Sharing</span>
+        </li>
+        <li class="tooltipped" data-position="top" data-delay="0" data-tooltip="Easily organize and color-code agendas with tags.">
+          <i class="material-icons">local_offer</i>
+          <span>Tags</span>
+        </li>
+        <li class="tooltipped grey-text" data-position="top" data-delay="0" data-tooltip="Create, edit, and complete tasks right inside your team's Slack chat.">
+          <i class="material-icons">chat</i>
+          <span>Agendas for Slack (coming soon)</span>
+        </li>
+      </ul>
+      <a class="waves-effect btn green accent-4" href="https://app.agendas.co">Get started</a>
+    </div>
+    <div class="col s12 m4 pull-m8"></div>
+  </div>
+</section>
+<section class="section white">
+  <div class="container row" style="margin-top: 2em; margin-bottom: 2em;">
+    <div class="col s12 m8">
+      <h4>For life.</h4>
+      <p class="large-text" style="margin-bottom: 1rem;">Keep track of everything in your life using Agendas.</p>
+      <ul class="section-features" style="margin-bottom: 1rem;">
+        <li class="tooltipped" data-position="top" data-delay="0" data-tooltip="Share agendas with family and friends.">
+          <i class="material-icons">person_add</i>
+          <span>Sharing</span>
+        </li>
+        <li class="grey-text tooltipped" data-position="top" data-delay="0" data-tooltip="Use our Discord bot to manage agendas inside Discord servers.">
+          <i class="material-icons">voice_chat</i>
+          <span>Agendas for Discord (coming soon)</span>
+        </li>
+      </ul>
+      <a class="waves-effect waves-light btn blue accent-4" href="https://app.agendas.co">Get started</a>
+    </div>
+  </div>
+</section>
