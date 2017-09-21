@@ -22,7 +22,7 @@ There are 2 kinds of grant types you'll be able to use with Agendas:
 * You can't ensure the security of the client secret
 * Your app doesn't have any servers
 
-**TL;DR** Generally, use implicit grant for static web apps or mobile apps. For apps run on a server, use authorization code grant.
+**TL;DR** Generally, use implicit grant for static web apps or mobile apps. For apps that run on a server, use authorization code grant.
 
 ## Configuring Authentication
 
