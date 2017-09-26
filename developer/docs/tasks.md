@@ -12,7 +12,7 @@ This endpoint does not accept any parameters.
 ### Response
 A JSON array with objects representing [tasks](#get-tasksagendaid).
 
-**_NOTE:_** This endpoint represents tasks using their IDs.
+**_NOTE:_** This endpoint represents tags using their IDs.
 
 ### Example
 
@@ -108,7 +108,7 @@ A JSON object with these paramters:
 | `deadlineTime` | bool | `true` if the task's deadline has a time. |
 | `repeat` | string | A string corresponding to a [repeat](#repeats). |
 | `repeatEnds` | date | The date when the task should stop repeating. |
-| `tags` | array | An array containing the tags this task belongs to. |
+| `tags` | array | An array containing the tags this task belongs to. *See [Tags](tags#get-tagsagendaid)* |
 | `priority` | number | The priority of the task. |
 | `notes` | string | The notes for the task. |
 
@@ -241,8 +241,6 @@ PATCH https://api.agendas.co/api/v1/tasks/-abcdefgh00/-a123456789
 ## DELETE `tasks/{agenda}/{id}`
 Deletes the task with a specified ID.
 
-This API endpoint will delete **all** tasks and tags in the agenda.
-
 ### Request Parameters
 This endpoint does not accept any parameters.
 
@@ -278,3 +276,6 @@ DELETE https://api.agendas.co/api/v1/tasks/-abcdefgh00/-a123456789
 | `2-weeks` | Other Week |
 | `month` | Month |
 | `year` | Year |
+
+## Next Steps
+[Organize tasks using tags.](tags)
