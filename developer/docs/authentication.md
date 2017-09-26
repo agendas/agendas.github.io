@@ -104,4 +104,6 @@ Authentication errors will be sent in plain text.
 | 403 | | Your app does not have permission to access a resource. Try re-authenticating with the correct scopes.
 
 ## Next Steps
-Learn how to [work with a user's agendas](agendas).
+
+* Learn how to [work with a user's agendas](agendas).
+* [Get information about a user](user).

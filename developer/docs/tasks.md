@@ -12,7 +12,7 @@ This endpoint does not accept any parameters.
 ### Response
 A JSON array with objects representing [tasks](#get-tasksagendaid).
 
-**_NOTE:_** This endpoint represents tags using their IDs.
+**_NOTE:_** This endpoint represents tags using their IDs (see the example).
 
 ### Example
 
@@ -32,7 +32,9 @@ GET https://api.agendas.co/api/v1/tasks/-abcdefgh00
     "deadlineTime": true,
     "repeat": "day",
     "repeatEnds": "1984-01-25T05:00:00.000Z",
-    "tags": ["-a123456000"],
+    "tags": {
+      "-a123456000": true
+    },
     "priority": 1,
     "notes": "Hello, world!"
   },

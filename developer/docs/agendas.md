@@ -214,3 +214,4 @@ DELETE https://api.agendas.co/api/v1/agendas/-abcdefgh00
 ## Next Steps
 * [Create, update, and delete tasks.](tasks)
 * [Organize tasks with tags.](tags)
+* [Retrieve the user's information.](user)
