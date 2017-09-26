@@ -47,7 +47,7 @@ A JSON object with these parameters:
 
 #### Request
 ```
-GET https://api.agendas.co/api/v1/email
+GET https://api.agendas.co/api/v1/username
 ```
 
 #### Response
