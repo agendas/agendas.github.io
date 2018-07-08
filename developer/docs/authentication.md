@@ -51,11 +51,11 @@ Should you ever need to regenerate your client secret, use the red regenerate bu
 
 #### Step 1: Request a Grant Code
 
-To obtain a grant code, open a browser window with the URL `https://api.agendas.co/api/v1/authorize`. Pass in your client ID, a redirect URL, and some scopes (separated by commas) through query variables.
+To obtain a grant code, open a browser window with the URL `https://api.agendas.co/api/v1/authorize`. Pass in your client ID, a redirect URL, and some scopes (separated by spaces) through query variables.
 
 *Sample Request:*
 ```
-https://api.agendas.co/api/v1/authorize?response_type=code&client_id=CLIENT_ID&redirect_uri=REDIRECT_URL&scopes=SCOPE,SCOPE
+https://api.agendas.co/api/v1/authorize?response_type=code&client_id=CLIENT_ID&redirect_uri=REDIRECT_URL&scope=SCOPE,SCOPE
 ```
 
 | Param Name | Description |
@@ -63,7 +63,7 @@ https://api.agendas.co/api/v1/authorize?response_type=code&client_id=CLIENT_ID&r
 | `response_type` | Pass in `code` to use authorization code grant. |
 | `client_id` | Your app's client ID. You can find this in the console. |
 | `redirect_uri` | The URL to send the token to. |
-| `scopes` | A comma-separated list of [authentication scopes](#authentication-scopes). |
+| `scope` | A space-separated list of [authentication scopes](#authentication-scopes). |
 
 #### Step 2: Get the Grant Code
 
@@ -155,13 +155,13 @@ The server will issue a new access token and a new refresh token, as shown in st
 **NOTE:** Refresh tokens never expire on their own. However, calling the `token` endpoint will invalidate any existing refresh tokens.
 
 ### Implicit Grant
-To obtain a token, open a browser window with the URL `https://api.agendas.co/api/v1/authorize`. Pass in your client ID, redirect URL, and scopes (separated by commas) through query variables.
+To obtain a token, open a browser window with the URL `https://api.agendas.co/api/v1/authorize`. Pass in your client ID, redirect URL, and scopes (separated by spaces) through query variables.
 
 You can also pass in an optional `state` parameter.
 
 *Sample Request:*
 ```
-https://api.agendas.co/api/v1/authorize?response_type=token&client_id=CLIENT_ID&redirect_uri=REDIRECT_URL&scopes=SCOPE,SCOPE
+https://api.agendas.co/api/v1/authorize?response_type=token&client_id=CLIENT_ID&redirect_uri=REDIRECT_URL&scope=SCOPE,SCOPE
 ```
 
 | Param Name | Description |
@@ -169,7 +169,7 @@ https://api.agendas.co/api/v1/authorize?response_type=token&client_id=CLIENT_ID&
 | `response_type` | Pass in `token` to use implicit grant. |
 | `client_id` | Your app's client ID. You can find this in the console. |
 | `redirect_uri` | The URL to send the token to. This **must** match the redirect URL you've set in the console. |
-| `scopes` | A comma-separated list of [authentication scopes](#authentication-scopes). |
+| `scope` | A space-separated list of [authentication scopes](#authentication-scopes). |
 
 #### Response
 
